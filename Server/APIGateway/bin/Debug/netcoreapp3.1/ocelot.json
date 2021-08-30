@@ -1,0 +1,111 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/account",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44303
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/user",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/account/Login",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44303
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/user/Login",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/account/Register",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44303
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/user/Register",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/home",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44397
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/home",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "AuthenticationProviderKey": "ProviderKey",
+      "AllowedScopes": []
+    },
+    {
+      "DownstreamPathTemplate": "/api/home/CreateMessage",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44397
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/home/CreateMessage",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/home/Room",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44397
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/home/Room",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/home/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44397
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/home/{id}",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProviderKey",
+        "AllowedScopes": []
+      }
+    }
+
+
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:44358"
+  }
+
+}
